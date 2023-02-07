@@ -79,13 +79,21 @@
     padding: 4px 5px;
     box-sizing: border-box;
     cursor: pointer;
+    text-decoration: none;
   }
   
   .nav-links--link.active,
   .nav-links--link:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    text-decoration: none;
   }
+
+  .nav-links--link:visited {
+    color: inherit;
+    background-color: inherit;
+  }
+
   
   .footer-note {
     color: var(--primary-color);
