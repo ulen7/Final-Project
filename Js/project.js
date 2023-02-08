@@ -11,11 +11,10 @@ $(".colors-button").on("click", function() {
     $(document.body).css("--secondary-color", secondaryColor);
     $(document.body).css("--bg-color", bgColor);
     $(document.body).css("--text-color", textColor);
-    var iFrameDOM = $("#iframe_1").contents();
-    $iFrameDOM.contents().find(".content-iframe").css( "background-color", "#BADA55" );
+    $("iframe_test").contents().find(".content-iframe").css("background-color", "blue");
   });
 
-  $(".nav-links--link").on("click", function() {
+$(".nav-links--link").on("click", function() {
     $(".nav-links--link").removeClass("active");
     $(this).addClass("active");
   });
