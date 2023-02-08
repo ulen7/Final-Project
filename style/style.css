@@ -133,7 +133,23 @@
     height: 20px;
     width: 20px;
   }
-  
+
+  .colors-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  .colors-button:hover{
+    box-shadow: 2px 2px 2px gray;
+  }
+
+  .colors-button.active{
+    box-shadow: 3px 3px 3px gray;
+  }
+
   #button1{
     background-color: var(--theme-primary);
   }
@@ -150,18 +166,6 @@
     background-color: var(--theme-text);
   }
 
-  .colors-button {
-    margin: 0;
-    padding: 0;
-    border: none;
-    width: 40px;
-    height: 40px;
-  }
-
-  .colors-button:hover{
-    box-shadow: 2px 2px 2px gray;
-  }
-
-  .colors-button.active{
-    box-shadow: 3px 3px 3px gray;
+  #test{
+    color: var(--text-color);
   }
