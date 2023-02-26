@@ -12,8 +12,8 @@
 
 body {
     font-family: "Segoe UI", "Serif", "Verdana", "Arial";
-    background-color: #F1F7ED;
-    color: #0B132B;
+    background-color: var(--bg-color);
+    color: var(--text-color);
   }
 
 .content-iframe2 {
@@ -22,3 +22,43 @@ body {
     padding: 0;
     text-align: justify;
   }
+
+.am-par {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  background: -webkit-linear-gradient(#C70039 , #4B0082);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#am-par1 {
+  padding-right: 10%;
+  padding-left: 3%;
+}
+
+#am-par2 {
+  padding-left: 20%;
+  padding-right: 2%;
+}
+
+#am-par3 {
+  padding-right: 15%;
+  padding-left: 8%;
+}
+
+#am-par4 {
+  padding-left: 10%;
+  padding-right: 5%;
+}
+

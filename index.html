@@ -5,7 +5,6 @@
     <title>Alejandro's Website</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style/style.css"/>
-
 </head>
 <body>
     <div class="container">
@@ -15,7 +14,7 @@
           </div>
 
           <div class="header-settings">
-            <button type="button" class="colors-button active" style="--theme-primary: #7E1811; --theme-secondary: #FFA400; --theme-bg: #F1F7ED; --theme-text: #0B132B;">
+            <button type="button" class="colors-button active" id="button-color" style="--theme-primary: #F72585; --theme-secondary: #7209B7; --theme-bg: #3A0CA3; --theme-text: #4361EE;">
               <table cellspacing="0" cellpadding="0">
                 <tr>
                   <th class="table--button" id="button1"></th>
@@ -27,7 +26,7 @@
                 </tr>
               </table>
             </button>
-            <button type="button" class="colors-button" style="--theme-primary: #6247AA; --theme-secondary: #368F8B; --theme-bg: #DDD8C4; --theme-text: #61210F;">
+            <button type="button" class="colors-button" style="--theme-primary: #FF7F50; --theme-secondary: #1E90FF; --theme-bg: #FFD700; --theme-text: #00FF7F;">
               <table cellspacing="0" cellpadding="0">
                 <tr>
                   <th class="table--button" id="button1"></th>
@@ -56,7 +55,7 @@
         <div class="nav">
           <ul class="nav-links">
             <li class="nav-links--link active">
-              <a class="nav-links--link active" href="contents/home.html" target="iframe_1">Home</a></p>
+              <a class="nav-links--link active" href="contents/aboutme.html" target="iframe_1">About me</a></p>
             </li>
             <li class="nav-links--link">
               <a class="nav-links--link" href="contents/about.html" target="iframe_1">About</a></p>
@@ -66,9 +65,9 @@
             </li>
           </ul>
         </div>
-        <div  id="iframe_test">
-          <iframe src="contents/home.html" name="iframe_1" scrolling="no" seamless id="iframe_1"></iframe>         
-        </div>
+      <div id="iframe_test">
+        <iframe src="contents/aboutme.html" name="iframe_1" scrolling="no" seamless id="iframe_1" allow-same-origin></iframe>
+      </div>
         <div class="footer">
           <span class="footer-note">
                 Alejandro Navarro San Martin
