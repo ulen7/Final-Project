@@ -2,7 +2,7 @@
   --primary-color: #7E1811;
   --secondary-color: #FFA400;
   --bg-color: rgb(64, 40, 201);
-  --text-color: #0B132B;
+  --text-color: #bb2a36;
   
   --theme-primary: #e0e0e0;
   --theme-secondary: #9e9e9e;
@@ -10,28 +10,50 @@
   --theme-fourth: #492e2e;
   }
 
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+
 body {
-  font-family:"Roboto", "Poppings", "Segoe UI", "Serif", "Verdana", "Arial";
   background-color: var(--bg-color);
   color: var(--text-color);
+  height: calc(100vh - 8em);
+  padding: 4em;
+  font-family: 'Anonymous Pro', monospace;  
 }
 
-.neon-effect {
-  color: #fff;
-  font-size: 6em;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+.typing-effect {
+  width: 8ch;
+  animation: typing 1s steps(8), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 3em;
 }
 
-.am-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
+#typing-ts {
+  width: 16ch;
+  animation: typing 2s steps(16), blink .5s step-end infinite alternate;
+}
 
-
-.content-iframe2 {
+.content {
   position: relative;
   width: 100%;
   height: 100%;
@@ -41,7 +63,7 @@ body {
   text-align: justify;
   }
 
-.am-par {
+.text-content {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 2s;
