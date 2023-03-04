@@ -10,20 +10,67 @@
   --theme-fourth: #492e2e;
   }
 
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
+@import url(https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lobster&family=Mynerve&family=Pacifico&display=swap);
 
 html {
   min-height: 100%;
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  height: calc(100vh - 8em);
   padding: 4em;
   font-family: 'Anonymous Pro', monospace;  
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+table, td {
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+ul li:before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 125%; /* increase size by 25% */
+  animation: spin 4s infinite cubic-bezier(0.23, 1, 0.32, 1); /* slower rotation and custom timing function */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.list-content {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  background: -webkit-linear-gradient(#b3a2a6 , #a11a15);
+  -webkit-background-clip: text;
+  -moz-background-clip: text; 
+  -ms-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .typing-effect {
@@ -48,9 +95,8 @@ body {
   }
 }
 
-#typing-ts {
-  width: 16ch;
-  animation: typing 2s steps(16), blink .5s step-end infinite alternate;
+.table_skills {
+  padding-top: 20px;
 }
 
 .content {
@@ -66,7 +112,7 @@ body {
 .text-content {
   opacity: 0;
   animation-name: fadeIn;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
   background: -webkit-linear-gradient(#b3a2a6 , #a11a15);
   -webkit-background-clip: text;
@@ -105,3 +151,74 @@ body {
   padding-right: 5%;
 }
 
+#skills_we {
+  animation-duration: 7s
+}
+
+#typing-ts {
+  width: 16ch;
+  animation: typing 2s steps(16), blink .5s step-end infinite alternate;
+}
+
+#typing-we {
+  width: 15ch;
+  animation: typing 2s steps(15), blink .5s step-end infinite alternate;
+}
+
+#typing-ed {
+  width: 9ch;
+  animation: typing 2s steps(9), blink .5s step-end infinite alternate;
+}
+
+.img_we {
+  width: 40px;
+  height: auto;
+  transition: transform 2s ease;
+  animation-duration: 7s;  
+}
+
+.rotate {
+  transform: rotate(720deg);
+}
+
+#helpling-logo {
+  border-radius: 20px;
+}
+
+#pos_we {
+  font-weight: bold;
+  font-size: larger;
+  animation-duration: 7s
+}
+
+#loc_we {
+  text-transform: uppercase;
+  font-size: large;
+  animation-duration: 7s
+}
+
+#geo_we {
+  text-align: center;
+  background: -webkit-linear-gradient(#30b7f5 , #cde20a);
+  -webkit-background-clip: text;
+  -moz-background-clip: text; 
+  -ms-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 7s;  
+}
+
+#geo_we:hover {
+  font-size: 22px;
+  background: -webkit-linear-gradient(#4ad34a , #f530db);
+  -webkit-background-clip: text;
+  -moz-background-clip: text; 
+  -ms-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#date_we {
+  text-align: right;
+  animation-duration: 7s;  
+}

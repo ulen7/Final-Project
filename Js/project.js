@@ -36,3 +36,16 @@ $(document).ready(function() {
       $('iframe[name="iframe_1"]').contents().find('body').css('background-color', color);
     });
   });
+
+
+const imgs = document.querySelectorAll('.img_we');
+
+imgs.forEach((img) => {
+  img.addEventListener('mouseover', () => {
+    img.classList.add('rotate');
+
+    setTimeout(() => {
+      img.classList.remove('rotate');
+    }, 2000);
+  });
+});
