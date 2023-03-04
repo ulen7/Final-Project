@@ -12,13 +12,10 @@ $(".colors-button").on("click", function() {
     $(document.body).css("--bg-color", bgColor);
     $(document.body).css("--text-color", textColor);
 
-    // Get the iframe element
     var iframe = $("#iframe_1")[0];
 
-    // Get the contents of the iframe
     var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-    // Update the CSS styles of the elements inside the iframe
     $(iframeDoc).find("body").css("--primary-color", primaryColor);
     $(iframeDoc).find("body").css("--secondary-color", secondaryColor);
     $(iframeDoc).find("body").css("--bg-color", bgColor);
@@ -38,14 +35,23 @@ $(document).ready(function() {
   });
 
 
-const imgs = document.querySelectorAll('.img_we');
+window.onload = () => {
 
-imgs.forEach((img) => {
-  img.addEventListener('mouseover', () => {
-    img.classList.add('rotate');
+const images = document.querySelectorAll('.img_we');
 
-    setTimeout(() => {
-      img.classList.remove('rotate');
-    }, 2000);
+images.forEach((img) => {
+  img.addEventListener('load', () => {
+    img.style.transition = 'transform 2s ease-in-out, width 3s ease-in-out, height 3s ease-in-out';
+    img.style.transform = 'rotate(720deg) scale(2)'; 
+
+    img.addEventListener('transitionend', () => {
+      img.style.transition = 'transform 2s ease-in-out, width 3s ease-in-out, height 3s ease-in-out';
+      img.style.transform = 'rotate(-720deg) scale(1)';
+    }, { once: true });
   });
+
+  if (img.complete) {
+    img.dispatchEvent(new Event('load'));
+  }
 });
+}

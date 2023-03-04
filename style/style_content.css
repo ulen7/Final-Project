@@ -10,7 +10,7 @@
   --theme-fourth: #492e2e;
   }
 
-@import url(https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lobster&family=Mynerve&family=Pacifico&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lobster&family=Mynerve&family=Pacifico&display=swap');
 
 html {
   min-height: 100%;
@@ -43,16 +43,18 @@ table {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   padding-left: 1em;
 }
 
 ul li:before {
   content: "▶";
+  color: #ffffff;
   display: inline-block;
   margin-right: 0.5em;
-  font-size: 125%; /* increase size by 25% */
-  animation: spin 4s infinite cubic-bezier(0.23, 1, 0.32, 1); /* slower rotation and custom timing function */
+  font-size: 125%;
+  animation: spin 4s infinite cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-text-stroke: 1px #ffffff;
 }
 
 @keyframes spin {
@@ -170,19 +172,19 @@ ul li:before {
   animation: typing 2s steps(9), blink .5s step-end infinite alternate;
 }
 
-.img_we {
-  width: 40px;
-  height: auto;
-  transition: transform 2s ease;
-  animation-duration: 7s;  
+#typing-cm {
+  width: 10ch;
+  animation: typing 2s steps(10), blink .5s step-end infinite alternate;
 }
 
-.rotate {
-  transform: rotate(720deg);
+.img_we {
+  width: 60px;
+  height: auto;
 }
+
 
 #helpling-logo {
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 #pos_we {
@@ -199,6 +201,8 @@ ul li:before {
 
 #geo_we {
   text-align: center;
+  font-size: 22px;
+  font-weight: bold;
   background: -webkit-linear-gradient(#30b7f5 , #cde20a);
   -webkit-background-clip: text;
   -moz-background-clip: text; 
@@ -209,7 +213,9 @@ ul li:before {
 }
 
 #geo_we:hover {
-  font-size: 22px;
+  font-size: 18px;
+  font-style: normal;
+  background-color: #30b7f5;
   background: -webkit-linear-gradient(#4ad34a , #f530db);
   -webkit-background-clip: text;
   -moz-background-clip: text; 
